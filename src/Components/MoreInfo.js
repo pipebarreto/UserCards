@@ -31,18 +31,18 @@ export default function MoreInfo() {
     <li>Phone: {userInfo.phone}</li>
 
     
-    <li> Company: {userInfo.company.name}</li>
+    <li> Company: {/* A JSX comment  {userInfo.company.name} */}</li>
       
       <li>Address:</li>
       
         <ul>
-        <li>Street: {userInfo.address.street}</li>
+        <li>Street: {/*{userInfo.address.street}*/}</li>
 
-        <li>Suite: {userInfo.address.suite}</li>
+        <li>Suite: {/*{userInfo.address.suite}*/}</li>
        
-        <li>City: {userInfo.address.city}</li>
+        <li>City: {/*{userInfo.address.city}*/}</li>
 
-        <li>Zipcode: {userInfo.address.zipcode}</li>
+        <li>Zipcode: {/*{userInfo.address.zipcode}*/}</li>
         
         </ul>
       </ul>
