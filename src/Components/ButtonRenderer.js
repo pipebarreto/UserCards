@@ -8,7 +8,7 @@ export default function ButtonRenderer(props){
         
         onClick={() => window.location.href = '/user/id/' + props.id}>
 
-            More Details 
+        More Details 
                       
         </Button>
 

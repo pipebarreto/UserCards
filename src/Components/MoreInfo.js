@@ -18,34 +18,52 @@ export default function MoreInfo() {
       .catch(err=>console.log(err))
     }
 
-  return (
+    const [loading, setLoading] = useState(true);
 
-    <ul>
+    useEffect(() => {
 
-    <li>Name: {userInfo.name}</li>
-    
-    <li>Username: {userInfo.username}</li>
-    
-    <li>Email: {userInfo.email}</li>
-    
-    <li>Phone: {userInfo.phone}</li>
+      setTimeout(() => {
+         setLoading(false)
+      }, 500)
+
+    }, []);
 
     
-    <li> Company: {/* A JSX comment  {userInfo.company.name} */}</li>
-      
-      <li>Address:</li>
-      
+    if(!loading){
+
+      return (
+
         <ul>
-        <li>Street: {/*{userInfo.address.street}*/}</li>
-
-        <li>Suite: {/*{userInfo.address.suite}*/}</li>
-       
-        <li>City: {/*{userInfo.address.city}*/}</li>
-
-        <li>Zipcode: {/*{userInfo.address.zipcode}*/}</li>
+    
+        <li>Name: {userInfo.name}</li>
         
-        </ul>
-      </ul>
+        <li>Username: {userInfo.username}</li>
+        
+        <li>Email: {userInfo.email}</li>
+        
+        <li>Phone: {userInfo.phone}</li>
+    
+        
+        <li> Company: {userInfo.company.name}</li>
+          
+          <li>Address:</li>
+          
+            <ul>
+            <li>Street: {userInfo.address.street}</li>
+    
+            <li>Suite: {userInfo.address.suite}</li>
+           
+            <li>City: {userInfo.address.city}</li>
+    
+            <li>Zipcode: {userInfo.address.zipcode}</li>
+            
+            </ul>
+          </ul>
+    
+      );
+   }
+   else{
+    return <div>loading...</div> 
+   }
 
-  );
 }

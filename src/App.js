@@ -1,7 +1,7 @@
 import Home from './Components/Home';
 import './App.css';
 import MoreInfo from './Components/MoreInfo';
-import {  BrowserRouter,  Routes,  Route,  Link} from"react-router-dom";
+import {  BrowserRouter,  Routes,  Route} from"react-router-dom";
 
 
 function App() {
